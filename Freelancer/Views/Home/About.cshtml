@@ -1,7 +1,108 @@
 ﻿@{
     ViewBag.Title = "About";
 }
+
+@section scripts{
+    @Scripts.Render("~/bundles/assets/helper")
+}
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+<div class="row">
+    <div class="col-lg-4">
+        <div class="upload">
+            <div class="thumb" style="width: 350px !important; height:350px !important;border: solid 1px red;position:relative;">
+                <div class="canvas" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden;">
+                    <canvas></canvas>
+                    <div class="img-preloader">
+                        <div class="centerbox">
+                            <img src="https://xetayga-yamahawhynot.com/public/static/frontend/images/spinner-circle.svg" class="spin"> <p>Đang tải...</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="js_upload first" href=""> <span><img src="https://xetayga-yamahawhynot.com/public/static/frontend/images/icon-upload.png" alt=""><strong>tải ảnh từ máy</strong></span> </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="interact">
+            <div class="interact-contain" id="frame">
+                <h3 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <span>1. Chọn frame ảnh</span>
+                </h3>
+                <ul>
+                    <li data-frame="1" class="selected" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <img src="~/assets/images/frame/1.png" draggable="false">
+                    </li>
+                    <li data-frame="1" class="" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <img src="~/assets/images/frame/2.png" draggable="false">
+                    </li>
+                    <li data-frame="2" style="transform: matrix(1, 0, 0, 1, 0, 0);" class="">
+                        <img src="~/assets/images/frame/3.png" draggable="false">
+                    </li>
+                    <li data-frame="2" style="transform: matrix(1, 0, 0, 1, 0, 0);" class="">
+                        <img src="~/assets/images/frame/4.png" draggable="false">
+                    </li>
+                    <li data-frame="3" style="transform: matrix(1, 0, 0, 1, 0, 0);" class="">
+                        <img src="~/assets/images/frame/5.png" draggable="false">
+                    </li>
+                    <li data-frame="3" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <img src="~/assets/images/frame/6.png" draggable="false">
+                    </li>
+                </ul>
+            </div>
+            <div style="clear:both"></div>
+            <div class="interact-contain" id="sticker">
+                <h3 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">2. CHIA SẺ CỦA BẠN VỀ XE GA YAMAHa <span>(chọn chia sẻ có sẵn hoặc tạo chia sẻ của bạn, dưới 100 ký tự)</span> </h3>
+                <div class="js_sticker__slider">
+                    <div>
+                        <ul class="list_sticker">
+                            <li style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                                <img src="~/assets/images/sticker/red/1.png" draggable="false">
+                            </li>
+                            <li style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="~/assets/images/sticker/red/2.png" draggable="false"></li>
+                            <li style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="~/assets/images/sticker/red/3.png" draggable="false"></li>
+                            <li style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="~/assets/images/sticker/red/4.png" draggable="false"></li>
+                            <li style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="~/assets/images/sticker/red/5.png" draggable="false"></li>
+                            <li style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="~/assets/images/sticker/red/6.png" draggable="false"></li>
+                            <li style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="~/assets/images/sticker/red/7.png" draggable="false"></li>
+                            <li style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="~/assets/images/sticker/red/8.png" draggable="false"></li>
+                            <li style="transform: matrix(1, 0, 0, 1, 0, 0);"><img src="~/assets/images/sticker/red/9.png" draggable="false"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <div class="ip" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"> <input type="text" name="share_text" maxlength="255" placeholder="Nhập cảm nhận của bạn..." class="js_your_comment"> </div>
+        </div>
+        <div class="buttons" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"> <form id="uploadForm"></form> <a class="btn js_upload" href=""><span>tải ảnh khác</span> </a> <a class="btn js_review display" href=""><span>Hoàn thành</span></a> </div>
+    </div>
+</div>
+<div class="row">
+    <div class="result_wrap"> <h2><img src="https://xetayga-yamahawhynot.com/public/static/frontend/images/tt-result.png"></h2> <div class="winner" style="display: block;"> <p class="desc">Cám ơn bạn đã tham gia. Chúc mừng bạn đã trúng món quà ngày hôm nay: </p> <!-- <span class="js_name__gift">Áo thun WHY NOT</span> --> <div class="resulte_detail"> <div class="resulte_thumb"><img src="https://xetayga-yamahawhynot.com/public/static/frontend/images/prize/aothun.png"></div> <div class="resulte_copy"> <div class="count"> <p>Số lượt tham gia của bạn còn lại:</p> <h6>4/5</h6> </div> <p>Bài tham dự của bạn đang được xét duyệt. Nếu hợp lệ, bài của bạn sẽ hiện trong Thư Viện Ảnh và nhận được email xác nhận giải thưởng. <br> <!-- Lưu ý: Bài dự thi từ 50 likes trở lên được chấm giải thưởng tuần.</p> --> </p><div class="buttons" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"> <a href="" class="btn"><span>tham gia tiếp</span></a> <a href="https://xetayga-yamahawhynot.com/gallery" class="btn"><span>THƯ VIỆN ẢNH</span></a> </div> </div> </div> </div> <div class="loser"> <p class="desc">Cám ơn bạn đã tham gia. Rất tiếc bạn chưa trúng giải may mắn ngày hôm nay<span class="js_name__gift"></span></p> <div class="resulte_detail"> <div class="resulte_copy"> <div class="count"> <p>Số lượt tham gia của bạn còn lại:</p> <h6>4/5</h6> </div> <!-- <p>Bài dự thi hợp lệ từ 50 likes trở lên sẽ được chấm giải tuần và tháng. <br/>Đừng quên chia sẻ và kêu gọi bạn bè bình chọn cho bạn.</p> --> <div class="buttons" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"> <a href="" class="btn"><span>tham gia tiếp</span></a> <a href="https://xetayga-yamahawhynot.com/gallery" class="btn"><span>THƯ VIỆN ẢNH</span></a> </div> </div> </div> </div> </div>
+</div>
+<style>
+    .js_upload.first {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: #333;
+        cursor: pointer;
+    }
 
-<p>Use this area to provide additional information.</p>
+    .interact-contain ul li {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: 30px;
+        display: inline-block;
+        width: calc(100% / 9 - 6px);
+        position: relative;
+        margin: 0;
+        line-height: 25px;
+        cursor: pointer;
+    }
+
+        .interact-contain ul li img {
+            width: 80%;
+        }
+</style>
+

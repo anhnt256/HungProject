@@ -23,6 +23,24 @@ namespace Freelancer
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/Scripts/angular.js",
+                      "~/Scripts/angular-sanitize.js",
+                      "~/Scripts/angular-route.js",
+                      "~/assets/scripts/controller/MyApp.js",
+                      "~/assets/scripts/controller/UploadCtrl.js"
+                      ));
+            bundles.Add(new ScriptBundle("~/bundles/assets/helper").Include(
+                      "~/assets/scripts/helper/TweenMax.min.js",
+                      "~/assets/scripts/helper/hammer.min.js",
+                      "~/assets/scripts/helper/helper.js",
+                      "~/assets/scripts/helper/pixi.min.js",
+                      "~/assets/scripts/helper/gpixi.js",
+                      "~/assets/scripts/helper/pixi-transform-tool.min.js",
+                      "~/assets/scripts/helper/packery.js",
+                      "~/assets/scripts/custom.js"
+                      ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
