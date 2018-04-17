@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Freelancer", "Freelancer\Freelancer.csproj", "{49698477-6703-416A-A91C-95AF0B07554F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bepminhauchan", "Freelancer\bepminhauchan.csproj", "{49698477-6703-416A-A91C-95AF0B07554F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{0EF426DD-0017-4A16-8800-61A37C50FDF5}"
 EndProject

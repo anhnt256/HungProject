@@ -9,6 +9,6 @@ namespace DAO.DAO
 {
     class Configuration
     {
-        public static string ConnectionStringCaoQuy = ConfigurationManager.ConnectionStrings["Freelancer"].ToString();
+        public static string ConnectionStringCaoQuy = ConfigurationManager.ConnectionStrings["bepminhauchan"].ToString();
     }
 }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Freelancer.Controllers
+namespace bepminhauchan.Controllers
 {
     public class HomeController : Controller
     {
